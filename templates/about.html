@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Language Translator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    #translator-container {
+      width: 60%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      background-color: #da1b60;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #da1b60;
+    }
+  </style>
+</head>
+<body>
+  <div id="translator-container">
+    <form action="/translate" method="post">
+      <label for="languages">Choose a source language:</label>
+      <select id="languages" name="languages">
+        <option value="telugu">Telugu</option>
+        <option value="hindi">Hindi</option>
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="malayalam">Malayalam</option>
+      </select>
+
+      <label for="language">Choose a target language:</label>
+      <select id="language" name="language">
+        <option value="telugu">Telugu</option>
+        <option value="hindi">Hindi</option>
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="malayalam">Malayalam</option>
+      </select>
+
+      <input type="submit" value="Translate">
+
+      <label for="content">Enter the content to be converted:</label>
+      <input type="text" id="content" name="content" required="text">
+    </form>
+  </div>
+</body>
+</html>

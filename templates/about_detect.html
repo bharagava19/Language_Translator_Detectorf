@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detector home</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+
+            #container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+
+            input[type="submit"] {
+                background-color: #da1b60;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #da1b60;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Detector home</h1>
+            <form action="/detect" method="post">
+                <label for="content">Enter the content:</label>
+                <input type="text" name="content" required="text"><br>
+                <input type="submit" value="Detect">
+            </form>
+        </div>
+    </body>
+</html>
